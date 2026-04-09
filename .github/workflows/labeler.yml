@@ -1,0 +1,20 @@
+name: Label PRs
+
+on:
+  workflow_call:
+
+jobs:
+  labeler:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: "ModularMCLib/GithubActions"
+          path: '.external-config'
+          ref: 'main'
+      - uses: actions/labeler@v5
+        with:
+          configuration-path: '.external-config/.github/labeler.yml'
