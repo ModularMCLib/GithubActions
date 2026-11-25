@@ -9,3 +9,15 @@ main:
 
 26.1:
   - base-branch: '26.1'
+
+1.x:
+  - base-branch: '1.x'
+
+2.x:
+  - base-branch: '2.x'
+
+3.x:
+  - base-branch: '3.x'
+
+4.x:
+  - base-branch: '4.x'
